@@ -1,0 +1,9 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark body {
+  background-color: #111827; /* Tailwind's gray-900 */
+  color: white;
+}
