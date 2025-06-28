@@ -12,7 +12,10 @@ export default function Contact() {
   ];
 
   return (
-    <section className="py-20 bg-gray-800 text-white" id="contact">
+    <section
+      className="py-20 bg-gradient-to-t from-gray-800 via-purple-600/30  to-gray-900 text-white"
+      id="contact"
+    >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

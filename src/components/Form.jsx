@@ -1,7 +1,10 @@
 import { Send } from "lucide-react";
 const Form = () => {
   return (
-    <div className=" bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 border border-gray-700">
+    <div
+      className=" bg-gray-900/30 backdrop-blur-md rounded-xl shadow-lg p-6 sm:p-8 border border-white/10
+"
+    >
       {/* Header */}
 
       {/* form */}
@@ -20,7 +23,7 @@ const Form = () => {
               name="name"
               placeholder="John Doe"
               required
-              className="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200 placeholder-gray-500
+              className="w-full p-3 rounded-lg bg-gray-700/30 /30 border border-gray-600 text-gray-200 placeholder-gray-500
                            focus:outline-none focus:ring-2 focus:ring-[#1DCD9F] focus:border-transparent transition duration-200 ease-in-out"
             />
           </div>
@@ -38,7 +41,7 @@ const Form = () => {
               type="email"
               placeholder="john@example.com"
               required
-              className="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200 placeholder-gray-500
+              className="w-full p-3 rounded-lg bg-gray-700/30  border border-gray-600 text-gray-200 placeholder-gray-500
                            focus:outline-none focus:ring-2 focus:ring-[#1DCD9F] focus:border-transparent transition duration-200 ease-in-out"
             />
           </div>
@@ -57,7 +60,7 @@ const Form = () => {
             name="subject"
             placeholder="Project Inquiry"
             required
-            className="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200 placeholder-gray-500
+            className="w-full p-3 rounded-lg bg-gray-700/30  border border-gray-600 text-gray-200 placeholder-gray-500
                          focus:outline-none focus:ring-2 focus:ring-[#1DCD9F] focus:border-transparent transition duration-200 ease-in-out"
           />
         </div>
@@ -76,7 +79,7 @@ const Form = () => {
             placeholder="Hello, I'd like to talk about..."
             rows={5}
             required
-            className="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200 placeholder-gray-500
+            className="w-full p-3 rounded-lg bg-gray-700/30  border border-gray-600 text-gray-200 placeholder-gray-500
                          focus:outline-none focus:ring-2 focus:ring-[#1DCD9F] focus:border-transparent transition duration-200 ease-in-out resize-y"
           ></textarea>
         </div>
