@@ -15,7 +15,7 @@ const Education = () => {
         <h4 className="text-xl font-bold mb-1 text-[#1DCD9F]">
           Higher Secondary Certificate
         </h4>
-        <p className="text-[#C68EFD] mb-2">Uttara High School ANd Collage</p>
+        <p className="text-[#C68EFD] mb-2">Uttara High School And Collage</p>
         <div className="flex justify-center gap-4 text-sm text-gray-400 mb-4">
           <div className="flex items-center">
             <Calendar className="w-4 h-4 mr-1 text-[#1DCD9F]" />
