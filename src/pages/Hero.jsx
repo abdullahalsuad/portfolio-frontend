@@ -36,7 +36,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 bg-gradient-to-t from-gray-800 via-teal-800/30  to-gray-900 "
     >
       {/* Background grid pattern */}
       <div className="absolute inset-0 -z-10">
