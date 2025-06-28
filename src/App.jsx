@@ -5,7 +5,7 @@ import Experience from "./pages/Experience";
 import Footer from "./pages/Footer";
 import Header from "./pages/Header";
 import Hero from "./pages/Hero";
-import Projects from "./pages/projects";
+import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 
 function App() {
