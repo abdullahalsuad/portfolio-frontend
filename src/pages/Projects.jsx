@@ -1,10 +1,13 @@
-"use client";
-
 import { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-
 import { ExternalLink, Github, Code } from "lucide-react";
+
+import Demo1 from "../assets/demo1.png";
+import Demo2 from "../assets/demo2.png";
+import Demo3 from "../assets/demo3.png";
+import Demo4 from "../assets/demo4.png";
+import Demo5 from "../assets/demo5.png";
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
@@ -15,69 +18,59 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Knowledge sharing platform",
       description:
-        "A full-stack e-commerce platform with user authentication, product management, and payment integration.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      demoLink: "#",
-      codeLink: "#",
+        "Publish articles, explore trending topics, connect with top contributors, and grow your academic network—all in a beautiful, fast, and responsive app.",
+      image: Demo1,
+      tags: ["React", "Node.js", "MongoDB", "Express", "Mongoose"],
+      demoLink: "brain-wave-client-theta.vercel.app",
+      codeLink: "https://github.com/abdullahalsuad/BrainWave-Client",
       category: "Full Stack",
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "HobbyHub",
       description:
-        "A collaborative task management application with real-time updates and team collaboration features.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "Firebase", "Tailwind CSS"],
-      demoLink: "#",
-      codeLink: "#",
-      category: "Frontend",
+        "HobbyHub is a vibrant, responsive web application designed to connect people through shared hobbies and interests.  HobbyHub helps you find or create  groups.",
+      image: Demo2,
+      tags: ["React", "Node.js", "MySQL", "Docker"],
+      demoLink: "jhinku-hobbyhub.vercel.app/",
+      codeLink: "https://github.com/abdullahalsuad/Jhinku-hobbyhub-client",
+      category: "Full Stack",
     },
     {
       id: 3,
-      title: "Finance Dashboard",
+      title: "Brain Wave Server",
       description:
-        "An interactive dashboard for tracking financial data with advanced filtering and visualization.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "D3.js", "Express", "PostgreSQL"],
-      demoLink: "#",
-      codeLink: "#",
-      category: "Full Stack",
-    },
-    {
-      id: 4,
-      title: "Social Media API",
-      description:
-        "A RESTful API for a social media platform with user authentication, posts, comments, and likes.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Node.js", "Express", "MongoDB", "JWT"],
-      demoLink: "#",
-      codeLink: "#",
+        "BrainWave Server powers a modern article publishing platform for tech creators and enthusiasts. It provides secure, scalable APIs for managing articles, likes, comments.",
+      image: Demo3,
+      tags: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT"],
+      demoLink: "brain-wave-server.vercel.app",
+      codeLink: "https://github.com/abdullahalsuad/BrainWave-Server",
       category: "Backend",
     },
+
     {
-      id: 5,
-      title: "Weather App",
+      id: 4,
+      title: "Crypto Daddy",
       description:
-        "A weather application that provides real-time weather data and forecasts for locations worldwide.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "OpenWeather API", "Tailwind CSS"],
-      demoLink: "#",
-      codeLink: "#",
+        "CryptoDaddy is a cryptocurrency tracking platform that provides real-time data on prices, market caps, and trading volumes for major cryptocurrencies like Bitcoin, Ethereum.",
+      image: Demo4,
+      tags: ["React", "Axios", "Tailwind CSS"],
+      demoLink: "https://github.com/abdullahalsuad/CryptoDaddy",
+      codeLink: "cryptodaddy.netlify.app/",
       category: "Frontend",
     },
     {
-      id: 6,
-      title: "Inventory Management System",
+      id: 5,
+      title: "Flip The Galaxy",
       description:
-        "A comprehensive inventory management system for tracking products, orders, and suppliers.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "Node.js", "MySQL", "Docker"],
-      demoLink: "#",
-      codeLink: "#",
-      category: "Full Stack",
+        "Flip The Galaxy is a React-based web game . It features a space theme , a grid of rocket cards. Goal seems to involve flipping or matching cards in some way. Short on details.",
+      image: Demo5,
+      tags: ["React", "Tailwind CSS"],
+      demoLink: "flip-the-galaxy.netlify.app/",
+      codeLink: "https://github.com/abdullahalsuad/memory-game",
+      category: "Frontend",
     },
   ];
 
@@ -147,7 +140,7 @@ export default function Projects() {
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image}
                   alt={project.title}
                   width={600}
                   height={400}
@@ -159,7 +152,6 @@ export default function Projects() {
                     <a
                       href={project.demoLink}
                       target="_blank"
-                      rel="noopener noreferrer"
                       className="text-white hover:text-[#1DCD9F] transition-colors"
                     >
                       <ExternalLink className="w-5 h-5" />
@@ -167,7 +159,6 @@ export default function Projects() {
                     <a
                       href={project.codeLink}
                       target="_blank"
-                      rel="noopener noreferrer"
                       className="text-white hover:text-[#C68EFD] transition-colors"
                     >
                       <Github className="w-5 h-5" />
@@ -201,37 +192,23 @@ export default function Projects() {
                 </div>
 
                 {/* Project Links */}
-                <div className="flex justify-between">
-                  <button
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center gap-1 border-[#006A71] text-[#1DCD9F]"
-                    asChild
+                <div className="flex justify-between py-4">
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    className="flex items-center gap-1 text-[#1DCD9F] px-3 py-1 rounded text-sm"
                   >
-                    <a
-                      href={project.demoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Demo
-                    </a>
-                  </button>
-                  <button
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center gap-1 border-[#006A71] text-[#1DCD9F]"
-                    asChild
+                    <ExternalLink className="w-4 h-4" />
+                    Demo
+                  </a>
+                  <a
+                    href={project.codeLink}
+                    target="_blank"
+                    className="flex items-center gap-1  text-[#1DCD9F] px-3 py-1 rounded text-sm"
                   >
-                    <a
-                      href={project.codeLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Code className="w-4 h-4" />
-                      Code
-                    </a>
-                  </button>
+                    <Code className="w-4 h-4" />
+                    Code
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -247,9 +224,8 @@ export default function Projects() {
           className="text-center mt-16"
         >
           <a
-            href="https://github.com"
+            href="https://github.com/abdullahalsuad"
             target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-full bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F] hover:from-[#b57fec] hover:to-[#19b88e] transition-all duration-200 shadow-lg"
           >
             <Github className="w-5 h-5" />
