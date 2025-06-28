@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -30,6 +31,16 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleSmoothScroll = (e, href) => {
+    e.preventDefault(); // Prevent default anchor link behavior
+    const targetId = href.substring(1); // Remove the '#'
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+    setMobileMenuOpen(false); // Close mobile menu after clicking
+  };
+
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
@@ -49,7 +60,9 @@ export default function Header() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <a href="#home">Abdullah Al Suad</a>
+            <a href="#home" onClick={(e) => handleSmoothScroll(e, "#home")}>
+              Abdullah Al Suad
+            </a>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -62,6 +75,7 @@ export default function Header() {
               >
                 <a
                   href={item.href}
+                  onClick={(e) => handleSmoothScroll(e, item.href)}
                   className="text-gray-300 hover:text-[#C68EFD] transition-colors"
                 >
                   {item.name}
@@ -97,7 +111,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className="text-gray-300 hover:text-[#C68EFD] transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleSmoothScroll(e, item.href)}
               >
                 {item.name}
               </a>

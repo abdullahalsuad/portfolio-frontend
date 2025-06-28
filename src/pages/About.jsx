@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import AboutImg from "../assets/img.jpeg";
 
@@ -49,35 +50,36 @@ export default function About() {
             transition={{ duration: 0.5 }}
           >
             <h3 className="text-2xl font-bold mb-4 text-[#1DCD9F]">
-              Software Engineer
+              Frontend Developer
             </h3>
             <p className="text-gray-300 mb-6">
-              I'm a passionate software engineer with expertise in building
-              modern web applications. With a strong foundation in software
-              development principles and a keen eye for detail, I create
-              efficient, scalable, and user-friendly solutions.
+              Hi, I’m a Front-End Web Developer from Bangladesh with a passion
+              for coding and continuous learning. I specialize in React.js and
+              have experience building both static and dynamic websites using
+              HTML5, CSS3, JavaScript (ES6), and frameworks like Next.js,
+              Node.js, and Express. I also enjoy working with Python and C++ in
+              my spare time.
             </p>
             <p className="text-gray-300 mb-6">
-              My journey in software engineering has equipped me with a diverse
-              skill set, allowing me to tackle complex problems and deliver
-              high-quality products. I'm constantly learning and adapting to new
-              technologies to stay at the forefront of the ever-evolving tech
-              landscape.
+              Beyond coding, I’m committed to personal and professional growth.
+              I believe in learning by doing, embracing challenges, and
+              improving a little each day. Let’s connect and create something
+              impactful together.
             </p>
 
             {/* Personal Info Grid */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div>
                 <h4 className="font-semibold mb-2 text-[#C68EFD]">Name:</h4>
-                <p className="text-gray-300">John Doe</p>
+                <p className="text-gray-300">Abdullah Al Suad</p>
               </div>
               <div>
-                <h4 className="font-semibold mb-2 text-[#C68EFD]">Email:</h4>
-                <p className="text-gray-300">john@example.com</p>
+                <h4 className="font-semibold mb-2 text-[#C68EFD]">Role:</h4>
+                <p className="text-gray-300">Frontend Developer</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2 text-[#C68EFD]">Location:</h4>
-                <p className="text-gray-300">San Francisco, CA</p>
+                <p className="text-gray-300">Bangladesh</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2 text-[#C68EFD]">
@@ -88,7 +90,7 @@ export default function About() {
             </div>
 
             {/* Resume Button */}
-            <button className="flex items-center gap-2 bg-[#006A71] hover:bg-[#169976] text-white">
+            <button className="flex items-center gap-2 px-4 py-2 bg-[#006A71] hover:bg-[#169976] text-white rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer">
               <FileText className="w-4 h-4" />
               Download Resume
             </button>

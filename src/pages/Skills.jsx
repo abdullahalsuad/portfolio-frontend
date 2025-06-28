@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import {
   Database,
@@ -31,12 +32,12 @@ export default function Skills() {
     {
       category: "Backend",
       icon: <Server className="w-6 h-6 text-[#C68EFD]" />,
-      items: ["Node.js", "Express", "Python", "Django", "RESTful APIs"],
+      items: ["Node.js", "Express", "Python"],
     },
     {
       category: "Database",
       icon: <Database className="w-6 h-6 text-[#C68EFD]" />,
-      items: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Redis"],
+      items: ["MongoDB", "Firebase"],
     },
     // {
     //   category: "Mobile",

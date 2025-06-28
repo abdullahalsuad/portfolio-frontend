@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 import { ExternalLink, Github, Code } from "lucide-react";
@@ -107,17 +108,17 @@ export default function Projects() {
 
         {/* Category Filter buttons */}
         <div className="flex justify-center mb-10">
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
               <button
                 key={category}
-                variant={filter === category ? "default" : "outline"}
                 onClick={() => setFilter(category)}
-                className={
-                  filter === category
-                    ? "bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F]"
-                    : "border-[#006A71] text-[#1DCD9F]"
-                }
+                className={`px-4 py-2 rounded-full font-medium transition duration-200 cursor-pointer
+          ${
+            filter === category
+              ? "bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F] text-white shadow-md"
+              : "border border-[#006A71] text-[#1DCD9F] hover:bg-[#1DCD9F] hover:text-white"
+          }`}
               >
                 {category}
               </button>
@@ -242,24 +243,18 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="text-center mt-16"
         >
-          <button
-            size="lg"
-            className="bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F] hover:from-[#b57fec] hover:to-[#19b88e]"
-            asChild
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-full bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F] hover:from-[#b57fec] hover:to-[#19b88e] transition-all duration-200 shadow-lg"
           >
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <Github className="w-5 h-5" />
-              View More on GitHub
-            </a>
-          </button>
+            <Github className="w-5 h-5" />
+            View More on GitHub
+          </a>
         </motion.div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Terminal from "../components/Terminal";
@@ -11,13 +12,13 @@ export default function Hero() {
   // Array of greetings in different languages
   const greetings = [
     "Hello",
-    "Hi there",
-    "What's up",
     "こんにちは", // Japanese
     "Hola", // Spanish
+    "What's up",
+    "안녕하세요", // Korean
+    "Hi there",
     "Bonjour", // French
     "Ciao", // Italian
-    "안녕하세요", // Korean
   ];
 
   // State to track current greeting
@@ -27,7 +28,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setGreetingIndex((prevIndex) => (prevIndex + 1) % greetings.length);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -64,7 +65,7 @@ export default function Hero() {
               </motion.span>
               <span className="block mt-2">I'm a </span>
               <span className="bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F] bg-clip-text text-transparent">
-                Software Engineer
+                Frontend Developer
               </span>
             </motion.h1>
 
@@ -87,25 +88,23 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <button
-                size="lg"
-                className="bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F] hover:from-[#b57fec] hover:to-[#19b88e] text-white"
                 onClick={() =>
                   document
                     .getElementById("projects")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md text-white bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F] hover:from-[#b57fec] hover:to-[#19b88e] shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer"
               >
                 View My Work
               </button>
+
               <button
-                size="lg"
-                variant="outline"
-                className="border-[#006A71] text-[#1DCD9F] hover:bg-[#006A71]/20"
                 onClick={() =>
                   document
                     .getElementById("contact")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-[#1DCD9F] text-[#1DCD9F] hover:bg-[#1DCD9F]/10 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer"
               >
                 Contact Me
               </button>

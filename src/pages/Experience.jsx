@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 import Education from "../components/Education";
@@ -7,7 +8,6 @@ import Education from "../components/Education";
  * Displays work history and education in a timeline format
  */
 export default function Experience() {
- 
   return (
     <section id="experience" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
