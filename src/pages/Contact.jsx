@@ -1,10 +1,18 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 import Form from "../components/Form";
+import GlassIcons from "../components/UI/GlassIcons";
 
 export default function Contact() {
+  // update with your own icons and colors
+  const items = [
+    { icon: <Github />, color: "purple", label: "Github" },
+    { icon: <Linkedin />, color: "blue", label: "LInkedin" },
+    { icon: <Twitter />, color: "black", label: "Twitter" },
+  ];
+
   return (
-    <section className="py-20 bg-gray-800 text-white">
+    <section className="py-20 bg-gray-800 text-white" id="contact">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -29,53 +37,23 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-2xl font-bold mb-6 text-[#C68EFD] text-center">
-            Send a Message
-          </h3>
           <Form />
         </motion.div>
       </div>
 
       {/* Social Media Links */}
+
       <motion.div
-        initial={{ opacity: 0, y: 50 }} // Adjusted animation for vertical entry
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }} // Added a slight delay for staggered animation
+        transition={{ duration: 0.5, delay: 0.2 }}
         className="mt-10 text-center"
       >
-        <h3 className="text-2xl font-bold mb-6 text-[#C68EFD]">Follow Me</h3>
         <div className="flex space-x-4 justify-center">
           {" "}
-          {/* justify-center to center the icons */}
-          <a
-            href="#"
-            className="p-3 bg-[#006A71]/20 rounded-lg hover:bg-[#006A71]/40 transition-colors"
-            aria-label="GitHub"
-          >
-            <Github className="w-6 h-6 text-[#1DCD9F]" />
-          </a>
-          <a
-            href="#"
-            className="p-3 bg-[#006A71]/20 rounded-lg hover:bg-[#006A71]/40 transition-colors"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="w-6 h-6 text-[#1DCD9F]" />
-          </a>
-          <a
-            href="#"
-            className="p-3 bg-[#006A71]/20 rounded-lg hover:bg-[#006A71]/40 transition-colors"
-            aria-label="Twitter"
-          >
-            <Twitter className="w-6 h-6 text-[#1DCD9F]" />
-          </a>
-          <a
-            href="#"
-            className="p-3 bg-[#006A71]/20 rounded-lg hover:bg-[#006A71]/40 transition-colors"
-            aria-label="Instagram"
-          >
-            <Instagram className="w-6 h-6 text-[#1DCD9F]" />
-          </a>
+          {/*   text-[#1DCD9F] bg-[#006A71] */}
+          <GlassIcons items={items} className="custom-class cursor-pointer" />
         </div>
       </motion.div>
     </section>

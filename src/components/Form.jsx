@@ -3,12 +3,6 @@ const Form = () => {
   return (
     <div className=" bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 border border-gray-700">
       {/* Header */}
-      <h2 className="text-3xl font-bold text-white mb-6 text-center">
-        Contact Us
-      </h2>
-      <p className="text-gray-400 text-center mb-8">
-        Have a question or want to work together? Send us a message!
-      </p>
 
       {/* form */}
       <form className="space-y-6 ">
@@ -90,7 +84,7 @@ const Form = () => {
         {/* Submit button with gradient and hover effects */}
         <button
           type="submit"
-          className="w-full py-3 px-6 rounded-lg font-semibold text-white transition duration-300 ease-in-out bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F] hover:from-[#b57fec] hover:to-[#19b88e] transform hover:scale-105 active:scale-95 flex items-center justify-center "
+          className="w-full py-3 px-6 rounded-lg font-semibold text-white transition duration-300 ease-in-out bg-gradient-to-r from-[#0b9780] to-[#1DCD9F] hover:from-[#1DCD9F] hover:to-[#0b9780] transform hover:scale-105 active:scale-95 flex items-center justify-center cursor-pointer"
         >
           <span className="flex items-center">
             <Send className="w-4 h-4 mr-2" /> Send Message
