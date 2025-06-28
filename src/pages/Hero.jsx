@@ -4,12 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Terminal from "../components/Terminal";
 
-/**
- * Hero Component
- * Main landing section with intro on left and terminal on right
- */
 export default function Hero() {
-  // Array of greetings in different languages
   const greetings = [
     "Hello",
     "こんにちは", // Japanese
@@ -31,6 +26,7 @@ export default function Hero() {
     }, 2000);
 
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -64,7 +60,7 @@ export default function Hero() {
                 {greetings[greetingIndex]}
               </motion.span>
               <span className="block mt-2">I'm a </span>
-              <span className="bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#a053f8] to-[#1DCD9F] bg-clip-text text-transparent">
                 Frontend Developer
               </span>
             </motion.h1>
