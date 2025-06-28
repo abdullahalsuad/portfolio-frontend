@@ -6,9 +6,24 @@ import GlassIcons from "../components/UI/GlassIcons";
 export default function Contact() {
   // update with your own icons and colors
   const items = [
-    { icon: <Github />, color: "purple", label: "Github" },
-    { icon: <Linkedin />, color: "blue", label: "LInkedin" },
-    { icon: <Twitter />, color: "black", label: "Twitter" },
+    {
+      icon: <Github />,
+      color: "purple",
+      label: "Github",
+      href: "https://github.com/abdullahalsuad",
+    },
+    {
+      icon: <Linkedin />,
+      color: "blue",
+      label: "LInkedin",
+      href: "https://www.linkedin.com/in/abdullahalsuad",
+    },
+    {
+      icon: <Twitter />,
+      color: "black",
+      label: "Twitter",
+      href: "https://x.com/abdullahalsuad",
+    },
   ];
 
   return (
@@ -32,7 +47,7 @@ export default function Contact() {
         </p>
       </motion.div>
 
-      <div className="w-4/12 mx-auto ">
+      <div className="lg:w-4/12 px-2  mx-auto ">
         {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}

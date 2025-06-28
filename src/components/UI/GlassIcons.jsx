@@ -17,13 +17,14 @@ const GlassIcons = ({ items, className }) => {
 
   return (
     <div
-      className={`grid gap-[5em] grid-cols-2 md:grid-cols-3 mx-auto py-[3em] overflow-visible ${
+      className={`grid gap-[5em] grid-cols-3  mx-auto py-[3em] overflow-visible ${
         className || ""
       }`}
     >
       {items.map((item, index) => (
         <button
           key={index}
+          onClick={() => window.open(item.href, "_blank")}
           type="button"
           aria-label={item.label}
           className={`relative bg-transparent cursor-pointer outline-none w-[4.5em] h-[4.5em] [perspective:24em] [transform-style:preserve-3d] [-webkit-tap-highlight-color:transparent] group ${
