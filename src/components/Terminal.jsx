@@ -19,7 +19,7 @@ export default function Terminal() {
 
   // Personal information to display (simplified)
   const personalInfo = {
-    name: "John Doe",
+    name: "Abdullah Al Suad",
     role: "Frontend Developer",
     techSkills: ["JavaScript", "React", "HTML", "CSS", "Tailwind CSS", "Git"],
   };
