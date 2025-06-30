@@ -10,13 +10,13 @@ import Skills from "./pages/Skills";
 
 function App() {
   return (
-    <div className="relative bg-gray-900 text-gray-100 min-h-screen">
+    <div className="relative min-h-screen text-gray-100 bg-gray-900">
       <Header />
       <Hero />
       <About />
       <Skills />
       <Projects />
-      
+
       <Contact />
       <Footer />
     </div>

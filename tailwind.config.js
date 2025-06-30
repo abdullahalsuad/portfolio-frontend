@@ -89,3 +89,5 @@
 //   },
 //   plugins: [require("tailwindcss-animate")],
 // };
+
+// tailwind.config.js

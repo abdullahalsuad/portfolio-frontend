@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Logo from "../assets/logo.png";
 
 /**
  * Header Component
@@ -45,28 +46,32 @@ export default function Header() {
     <motion.header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? "bg-gray-900/90 backdrop-blur-md shadow-md"
+          ? "shadow-md backdrop-blur-md bg-gray-900/90"
           : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+      <div className="container px-4 py-4 mx-auto">
+        <div className="flex justify-between items-center">
           {/* Logo */}
           <motion.div
             className="text-xl font-bold bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F] bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <a href="#home" onClick={(e) => handleSmoothScroll(e, "#home")}>
-              Abdullah Al Suad
+            <a
+              href="#home"
+              onClick={(e) => handleSmoothScroll(e, "#home")}
+              className="flex gap-4 items-center"
+            >
+              <img src={Logo} className="h-10" /> Abdullah Al Suad
             </a>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden space-x-8 md:flex">
             {navItems.map((item) => (
               <motion.div
                 key={item.name}
@@ -99,13 +104,13 @@ export default function Header() {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <motion.div
-          className="md:hidden bg-gray-800 shadow-lg"
+          className="bg-gray-800 shadow-lg md:hidden"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+          <div className="container flex flex-col px-4 py-4 mx-auto space-y-4">
             {navItems.map((item) => (
               <a
                 key={item.name}
