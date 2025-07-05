@@ -22,7 +22,15 @@ export default function Projects() {
       description:
         "Publish articles, explore trending topics, connect with top contributors, and grow your academic network—all in a beautiful, fast, and responsive app.",
       image: Demo1,
-      tags: ["React", "Node.js", "MongoDB", "Express", "Mongoose"],
+      tags: [
+        "React",
+        "Axios",
+        "Tailwind CSS",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "Mongoose",
+      ],
       demoLink: "https://brain-wave-client-theta.vercel.app",
       codeLink: "https://github.com/abdullahalsuad/BrainWave-Client",
       category: "Full Stack",
@@ -33,7 +41,15 @@ export default function Projects() {
       description:
         "HobbyHub is a vibrant, responsive web application designed to connect people through shared hobbies and interests. HobbyHub helps you find or create groups.",
       image: Demo2,
-      tags: ["React", "Node.js", "MySQL", "Docker"],
+      tags: [
+        "React",
+        "Axios",
+        "Tailwind CSS",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "Mongoose",
+      ],
       demoLink: "https://jhinku-hobbyhub.vercel.app/",
       codeLink: "https://github.com/abdullahalsuad/Jhinku-hobbyhub-client",
       category: "Full Stack",
@@ -81,18 +97,18 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-20 bg-gray-800">
-      <div className="container mx-auto px-4">
+      <div className="container px-4 mx-auto">
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">My Projects</h2>
           <div className="h-1 w-20 bg-gradient-to-r from-[#C68EFD] to-[#1DCD9F] mx-auto"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto mt-6">
+          <p className="mx-auto mt-6 max-w-2xl text-gray-400">
             Here are some of my recent projects that showcase my skills and
             expertise.
           </p>
@@ -120,7 +136,7 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -129,7 +145,7 @@ export default function Projects() {
           {filteredProjects.map((project) => (
             <motion.div
               key={project.id}
-              className="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-700"
+              className="overflow-hidden bg-gray-900 rounded-lg border border-gray-700 shadow-lg transition-shadow hover:shadow-xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -137,17 +153,17 @@ export default function Projects() {
               whileHover={{ y: -5 }}
             >
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="overflow-hidden relative h-48">
                 <img
                   src={project.image}
                   alt={project.title}
                   width={600}
                   height={400}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
                 />
                 {/* Hover Overlay with Links */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 w-full flex justify-between">
+                <div className="flex absolute inset-0 items-end bg-gradient-to-t to-transparent opacity-0 transition-opacity duration-300 from-black/60 hover:opacity-100">
+                  <div className="flex justify-between p-4 w-full">
                     <a
                       href={project.demoLink}
                       target="_blank"
@@ -168,7 +184,7 @@ export default function Projects() {
 
               {/* Project Details */}
               <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-bold text-[#1DCD9F]">
                     {project.title}
                   </h3>
@@ -176,7 +192,7 @@ export default function Projects() {
                     {project.category}
                   </span>
                 </div>
-                <p className="text-gray-400 mb-4">{project.description}</p>
+                <p className="mb-4 text-gray-400">{project.description}</p>
 
                 {/* Project Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -220,7 +236,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-center mt-16"
+          className="mt-16 text-center"
         >
           <a
             href="https://github.com/abdullahalsuad"
